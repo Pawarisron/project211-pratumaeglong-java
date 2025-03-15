@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.BoxBlur?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Ellipse?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1020.0" style="-fx-background-color: #012030;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ku.cs.controllers.admin.AdminDataPageController">
+   <children>
+      <Ellipse fill="#9aeba3" layoutX="87.0" layoutY="635.0" radiusX="67.0" radiusY="60.0" stroke="BLACK" strokeType="INSIDE">
+         <effect>
+            <BoxBlur height="156.0" width="255.0" />
+         </effect>
+      </Ellipse>
+      <Ellipse fill="#fc72a2" layoutX="932.0" layoutY="163.0" opacity="0.54" radiusX="136.0" radiusY="191.0" stroke="BLACK" strokeType="INSIDE">
+         <effect>
+            <BoxBlur height="156.0" width="255.0" />
+         </effect>
+      </Ellipse>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="531.0" layoutX="297.0" layoutY="56.0" smooth="false" stroke="WHITE" strokeLineCap="ROUND" strokeMiterLimit="20.0" strokeType="OUTSIDE" strokeWidth="20.0" width="666.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#13678a" height="640.0" layoutX="41.0" layoutY="36.0" smooth="false" stroke="#13678a" strokeLineCap="ROUND" strokeMiterLimit="20.0" strokeType="OUTSIDE" strokeWidth="20.0" width="550.0" />
+      <Label layoutX="45.0" layoutY="50.0" text="รายชื่อผู้ใช้ระบบ" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="48.0" />
+         </font>
+      </Label>
+      <Label fx:id="levelLabel" layoutX="45.0" layoutY="117.0" text="levelLabel" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Button layoutX="839.0" layoutY="627.0" mnemonicParsing="false" onAction="#dataPageBackButton" stylesheets="@../designs/MBlueButton.css" text="ย้อนกลับ">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Button>
+      <TableView fx:id="userTableView" layoutX="45.0" layoutY="147.0" prefHeight="450.0" prefWidth="542.0" stylesheets="@../designs/TableView.css">
+        <columns>
+          <TableColumn fx:id="loginTimeColumn" prefWidth="180.0" text="เวลาเข้าใช้งานล่าสุด" />
+          <TableColumn fx:id="accountNameColumn" prefWidth="180.0" text="ชื่อผู้ใช้" />
+            <TableColumn fx:id="usernameColumn" minWidth="0.0" prefWidth="180.0" text="ชื่อบัญชีผู้ใช้" />
+        </columns>
+      </TableView>
+      <ImageView fx:id="userImage" fitHeight="150.0" fitWidth="150.0" layoutX="645.0" layoutY="160.0" pickOnBounds="true" preserveRatio="true" />
+      <Label layoutX="809.0" layoutY="207.0" text="ชื่อผู้ใช้" textFill="#13678a">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="accountNameLabel" layoutX="819.0" layoutY="237.0" prefHeight="26.0" prefWidth="136.0" textFill="#13678a">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="809.0" layoutY="263.0" text="ชื่อบัญชีผู้ใช้" textFill="#13678a">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="usernameLabel" layoutX="819.0" layoutY="293.0" prefHeight="26.0" prefWidth="136.0" textFill="#13678a">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="631.0" layoutY="316.0" text="หน่วยงานที่รับผิดชอบ" textFill="#13678a">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="departmentInChargeLabel" layoutX="641.0" layoutY="347.0" prefHeight="26.0" prefWidth="250.0" textFill="#2b6777">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="631.0" layoutY="376.0" text="เวลาเข้าใช้งานล่าสุด" textFill="#13678a">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="loginTimeLabel" layoutX="641.0" layoutY="406.0" prefHeight="26.0" prefWidth="250.0" textFill="#13678a">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="809.0" layoutY="151.0" text="สถานภาพ" textFill="#13678a">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="selectedLevelLable" layoutX="819.0" layoutY="181.0" prefHeight="26.0" prefWidth="136.0" textFill="#13678a">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <ChoiceBox fx:id="levelChoiceBox" layoutX="467.0" layoutY="119.0" prefHeight="26.0" prefWidth="120.0" />
+   </children>
+</AnchorPane>

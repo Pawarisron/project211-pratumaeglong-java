@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.BoxBlur?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Ellipse?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1020.0" style="-fx-background-color: #012030;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ku.cs.controllers.user.UserMainPageController">
+   <children>
+      <Ellipse fill="#fc72a2" layoutX="713.0" layoutY="501.0" opacity="0.4" radiusX="231.0" radiusY="191.0" stroke="BLACK" strokeType="INSIDE">
+         <effect>
+            <BoxBlur height="156.0" width="255.0" />
+         </effect>
+      </Ellipse>
+      <Ellipse fill="#9aeba3" layoutX="935.0" layoutY="69.0" opacity="0.56" radiusX="67.0" radiusY="60.0" stroke="BLACK" strokeType="INSIDE">
+         <effect>
+            <BoxBlur height="156.0" width="255.0" />
+         </effect>
+      </Ellipse>
+      <Ellipse fill="#13678a" layoutX="203.0" layoutY="262.0" radiusX="74.0" radiusY="53.0" stroke="BLACK" strokeType="INSIDE">
+         <effect>
+            <BoxBlur height="156.0" width="255.0" />
+         </effect>
+      </Ellipse>
+      <Ellipse fill="#fcf38b" layoutX="332.0" layoutY="483.0" opacity="0.22" radiusX="188.0" radiusY="157.0" stroke="BLACK" strokeType="INSIDE">
+         <effect>
+            <BoxBlur height="156.0" width="255.0" />
+         </effect>
+      </Ellipse>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#13678a" height="90.0" smooth="false" stroke="#13678a" strokeLineCap="ROUND" strokeMiterLimit="20.0" strokeType="OUTSIDE" strokeWidth="0.0" width="1020.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="220.0" layoutX="31.0" layoutY="34.0" smooth="false" stroke="WHITE" strokeLineCap="ROUND" strokeMiterLimit="20.0" strokeType="OUTSIDE" strokeWidth="20.0" width="177.0" />
+      <Label fx:id="accountNameLabel" layoutX="29.0" layoutY="232.0" text="AccountNameLabel" textFill="#13678a">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+         <effect>
+            <Glow level="0.34" />
+         </effect></Label>
+      <ImageView fx:id="accountImageView" fitHeight="187.0" fitWidth="187.0" layoutX="27.0" layoutY="37.0" />
+      <Button layoutX="332.0" layoutY="247.0" mnemonicParsing="false" onAction="#handleReportButton" prefHeight="79.0" prefWidth="354.0" stylesheets="@../designs/YellowButtonBlueText.css" text="แจ้งเรื่องร้องเรียน">
+         <font>
+            <Font name="System Bold Italic" size="35.0" />
+         </font>
+      </Button>
+      <Button layoutX="332.0" layoutY="354.0" mnemonicParsing="false" onAction="#handleReportListButton" stylesheets="@../designs/YellowButtonBlueText.css" text="เรื่องร้องเรียนทั้งหมด">
+         <font>
+            <Font name="System Bold Italic" size="35.0" />
+         </font>
+      </Button>
+      <Button layoutX="332.0" layoutY="461.0" mnemonicParsing="false" onAction="#handleMyReportButton" stylesheets="@../designs/YellowButtonBlueText.css" text="เรื่องร้องเรียนของฉัน">
+         <font>
+            <Font name="System Bold Italic" size="35.0" />
+         </font>
+      </Button>
+      <Button layoutX="864.0" layoutY="26.0" mnemonicParsing="false" onAction="#handleLogoutButton" stylesheets="@../designs/GreenButtonH.css" text="ออกจากระบบ">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Button>
+      <Button layoutX="241.0" layoutY="26.0" mnemonicParsing="false" onAction="#handleChangeProfile" stylesheets="@../designs/MBlueButton.css" text="เปลี่ยนรูปโปรไฟล์">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Button>
+      <Label fx:id="profileErrMassageLabel" layoutX="617.0" layoutY="40.0" textFill="#ff3719">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Button layoutX="430.0" layoutY="26.0" mnemonicParsing="false" onAction="#handleChangePasswordButton" stylesheets="@../designs/MBlueButton.css" text="เปลี่ยนรหัสผ่าน">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

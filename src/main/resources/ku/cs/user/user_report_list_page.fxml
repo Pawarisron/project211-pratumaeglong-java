@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.effect.BoxBlur?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Ellipse?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1020.0" style="-fx-background-color: #012030;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ku.cs.controllers.user.UserReportListPageController">
+    <children>
+      <Circle fill="#012030" layoutX="932.0" layoutY="99.0" radius="9.0" smooth="false" stroke="#012030" strokeType="INSIDE" />
+      <Ellipse fill="#fc72a2" layoutX="245.0" layoutY="231.0" opacity="0.4" radiusX="231.0" radiusY="191.0" stroke="BLACK" strokeType="INSIDE">
+         <effect>
+            <BoxBlur height="156.0" width="255.0" />
+         </effect>
+      </Ellipse>
+      <Ellipse fill="#fcf38b" layoutX="816.0" layoutY="171.0" opacity="0.22" radiusX="188.0" radiusY="157.0" stroke="BLACK" strokeType="INSIDE">
+         <effect>
+            <BoxBlur height="156.0" width="255.0" />
+         </effect>
+      </Ellipse>
+      <Ellipse fill="#9aeba3" layoutX="941.0" layoutY="638.0" radiusX="67.0" radiusY="60.0" stroke="BLACK" strokeType="INSIDE">
+         <effect>
+            <BoxBlur height="156.0" width="255.0" />
+         </effect>
+      </Ellipse>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="605.0" layoutX="373.0" layoutY="86.0" smooth="false" stroke="WHITE" strokeLineCap="ROUND" strokeMiterLimit="20.0" strokeType="OUTSIDE" strokeWidth="20.0" width="600.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#13678a" height="565.0" layoutX="50.0" layoutY="106.0" smooth="false" stroke="#13678a" strokeLineCap="ROUND" strokeMiterLimit="20.0" strokeType="OUTSIDE" strokeWidth="20.0" width="410.0" />
+        <Button layoutX="849.0" layoutY="638.0" mnemonicParsing="false" onAction="#handleBackButton" stylesheets="@../designs/MBlueButton.css" text="ย้อนกลับ">
+            <font>
+                <Font name="System Bold" size="30.0" />
+            </font>
+        </Button>
+      <Label layoutX="303.0" prefHeight="70.0" prefWidth="420.0" text="รวมเรื่องร้องเรียน" textFill="#dafdba">
+         <font>
+            <Font name="System Bold" size="54.0" />
+         </font>
+         <effect>
+            <Glow level="0.42" />
+         </effect>
+      </Label>
+      <Label fx:id="detailLabel" alignment="TOP_LEFT" layoutX="510.0" layoutY="266.0" prefHeight="240.0" prefWidth="430.0" textFill="#45c4b0" wrapText="true">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <GridPane fx:id="gridPane" layoutX="510.0" layoutY="116.0" prefHeight="110.0" prefWidth="420.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="175.0" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="349.0" minWidth="10.0" prefWidth="322.400048828125" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label fx:id="statusLabel" prefHeight="20.0" prefWidth="300.0" text="statusLabel" textFill="#9aeba3" GridPane.columnIndex="1">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label text="หมวดหมู่" textFill="#2b6777" GridPane.rowIndex="2">
+               <font>
+                  <Font name="System Bold Italic" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="headerLabel" prefHeight="20.0" prefWidth="300.0" text="headerLabel" textFill="#45c4b0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="groupLabel" prefHeight="20.0" prefWidth="300.0" text="groupLabel" textFill="#45c4b0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label text="หัวข้อ" textFill="#2b6777" GridPane.rowIndex="1">
+               <font>
+                  <Font name="System Bold Italic" size="20.0" />
+               </font>
+            </Label>
+            <Label prefHeight="30.0" prefWidth="70.0" text="สถานะ" textFill="#2b6777">
+               <font>
+                  <Font name="System Bold Italic" size="20.0" />
+               </font>
+            </Label>
+            <Label prefHeight="20.0" prefWidth="42.0" text="เวลา" textFill="#2b6777" GridPane.rowIndex="3">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="timeLabel" text="timeLabe" textFill="#45c4b0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </GridPane>
+      <Label layoutX="292.0" layoutY="120.0" text="หมวดหมู่" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="reportDetailLabel" layoutX="510.0" layoutY="236.0" text="รายละเอียด" textFill="#2b6777">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <TableView fx:id="reportTableView" layoutX="45.0" layoutY="151.0" prefHeight="508.0" prefWidth="420.0" stylesheets="@../designs/TableView.css">
+        <columns>
+            <TableColumn fx:id="headerTableColumn" editable="false" prefWidth="220.0" sortable="false" style="-fx-font-size: 14;" text="หัวข้อ" />
+            <TableColumn fx:id="timeTableColumn" editable="false" prefWidth="183.2000274658203" sortable="false" style="-fx-front-size: 14;" text="เวลา" />
+            <TableColumn fx:id="voteTableColumn" editable="false" prefWidth="96.0" sortable="false" style="-fx-front-size: 14;" text="โหวต" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <Button fx:id="voteButton" layoutX="503.0" layoutY="571.0" mnemonicParsing="false" onAction="#handleVoteButton" prefHeight="48.0" prefWidth="97.0" stylesheets="@../designs/MGreenButton.css" text="โหวต">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+         <tooltip>
+            <Tooltip text="หากเห็นด้วยกับเรื่องนี้สามารถโหวตเพื่อให้เรื่องนี้เป็นที่สนใจมากขึ้นได้โดยกดปุ่มนี้" />
+         </tooltip>
+      </Button>
+      <Label fx:id="voteErrorLabel" layoutX="610.0" layoutY="585.0" text="voteErrorLabel" textFill="#ff8181">
+         <font>
+            <Font size="16.0" />
+         </font></Label>
+      <Button fx:id="sortButton" layoutX="45.0" layoutY="118.0" mnemonicParsing="false" onAction="#handleSortButton" stylesheets="@../designs/YellowButtonBlueText.css" text="จัดเรียงตาม">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font></Button>
+      <ChoiceBox fx:id="filterChoiceBox" layoutX="365.0" layoutY="119.0" onAction="#handleFilterChoiceBox" prefHeight="30.0" prefWidth="100.0" style="-fx-font-size: 14;" />
+      <Button fx:id="inappropriateButton" layoutX="503.0" layoutY="635.0" mnemonicParsing="false" onAction="#handleInappropriateButton" stylesheets="@../designs/YellowButtonBlueText.css" text="รายงาน">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Button>
+      <Group layoutX="500.0" layoutY="100.0">
+         <children>
+            <Label fx:id="typeLabel" layoutX="1.0" layoutY="35.0" text="ประเภทการรายงาน" visible="false">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <ChoiceBox fx:id="typeChoiceBox" layoutX="141.0" layoutY="36.0" prefWidth="150.0" visible="false" />
+            <Label fx:id="inappropriateDetailLabel" layoutY="138.0" text="รายละเอียด" visible="false">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Button fx:id="inappropriateConfirmButton" layoutX="1.0" layoutY="395.0" mnemonicParsing="false" onAction="#handleInappropriateConfirmButton" stylesheets="@../designs/YellowButtonBlueText.css" text="ยืนยัน" visible="false">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <TextArea fx:id="inappropriateDetailTextArea" layoutX="1.0" layoutY="164.0" prefHeight="222.0" prefWidth="356.0" visible="false" />
+            <Label fx:id="inappropriateHeaderLabel" layoutY="75.0" text="หัวข้อ" visible="false">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="inappropriateHeaderTextField" layoutX="2.0" layoutY="103.0" prefHeight="25.0" prefWidth="356.0" visible="false" />
+            <Label fx:id="notificationLabel" layoutX="135.0" layoutY="402.0" text="notificationLabel" visible="false" />
+            <Button fx:id="inappropriateCancelButton" layoutX="65.0" layoutY="395.0" mnemonicParsing="false" onAction="#handleInappropriateCancelButton" stylesheets="@../designs/YellowButtonBlueText.css" text="ยกเลิก" visible="false">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Label fx:id="headerLabel1" text="headerLabel1" visible="false">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </Group>
+      <ImageView fx:id="groupImageView" fitHeight="158.0" fitWidth="232.0" layoutX="750.0" layoutY="380.0" pickOnBounds="true" preserveRatio="true" visible="false" />
+      <Label fx:id="errorLabel" layoutX="610.0" layoutY="647.0" text="errorLabel" textFill="#ff8181">
+         <font>
+            <Font size="16.0" />
+         </font></Label>
+      <Label fx:id="voteThisReportLabel" layoutX="503.0" layoutY="538.0" text="โหวตเรื่องนี้" textFill="#45c4b0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+    </children>
+
+</AnchorPane>

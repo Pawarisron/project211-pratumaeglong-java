@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.BoxBlur?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Ellipse?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1020.0" style="-fx-background-color: #012030;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ku.cs.controllers.staff.StaffMainPageController">
+    <children>
+      <Ellipse fill="#fc72a2" layoutX="361.0" layoutY="497.0" opacity="0.2" radiusX="231.0" radiusY="191.0" stroke="BLACK" strokeType="INSIDE">
+         <effect>
+            <BoxBlur height="156.0" width="255.0" />
+         </effect>
+      </Ellipse>
+      <Ellipse fill="#9aeba3" layoutX="213.0" layoutY="278.0" opacity="0.56" radiusX="67.0" radiusY="60.0" stroke="BLACK" strokeType="INSIDE">
+         <effect>
+            <BoxBlur height="156.0" width="255.0" />
+         </effect>
+      </Ellipse>
+      <Ellipse fill="#13678a" layoutX="935.0" layoutY="82.0" radiusX="74.0" radiusY="53.0" stroke="BLACK" strokeType="INSIDE">
+         <effect>
+            <BoxBlur height="156.0" width="255.0" />
+         </effect>
+      </Ellipse>
+      <Ellipse fill="#fcf38b" layoutX="703.0" layoutY="441.0" opacity="0.37" radiusX="188.0" radiusY="157.0" stroke="BLACK" strokeType="INSIDE">
+         <effect>
+            <BoxBlur height="156.0" width="255.0" />
+         </effect>
+      </Ellipse>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#13678a" height="99.0" layoutY="-8.0" smooth="false" stroke="#13678a" strokeLineCap="ROUND" strokeMiterLimit="20.0" strokeType="OUTSIDE" strokeWidth="0.0" width="1027.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="220.0" layoutX="41.0" layoutY="44.0" smooth="false" stroke="WHITE" strokeLineCap="ROUND" strokeMiterLimit="20.0" strokeType="OUTSIDE" strokeWidth="20.0" width="177.0" />
+        <Label fx:id="accountNameLabel" layoutX="38.0" layoutY="241.0" text="AccountNameLabel" textFill="#2b6777">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font></Label>
+        <ImageView fx:id="accountImageView" fitHeight="187.0" fitWidth="187.0" layoutX="37.0" layoutY="44.0" />
+        <Button layoutX="336.0" layoutY="240.0" mnemonicParsing="false" onAction="#handleReportHandleButton" stylesheets="@../designs/YellowButtonBlueText.css" text="จัดการเรื่องร้องเรียน">
+            <font>
+                <Font name="System Bold" size="40.0" />
+            </font>
+        </Button>
+        <Button layoutX="866.0" layoutY="31.0" mnemonicParsing="false" onAction="#handleLogoutButton" stylesheets="@../designs/MGreenButton.css" text="ออกจากระบบ">
+            <font>
+                <Font name="System Bold" size="20.0" />
+            </font>
+        </Button>
+        <Button layoutX="248.0" layoutY="34.0" mnemonicParsing="false" onAction="#handleChangeProfile" stylesheets="@../designs/MBlueButton.css" text="เปลี่ยนรูปโปรไฟล์">
+            <font>
+                <Font name="System Bold" size="20.0" />
+            </font>
+        </Button>
+        <Label fx:id="profileErrMassageLabel" layoutX="607.0" layoutY="46.0" textFill="#ff8181">
+            <font>
+                <Font size="16.0" />
+            </font>
+        </Label>
+      <Button layoutX="439.0" layoutY="34.0" mnemonicParsing="false" onAction="#handleChangePasswordButton" stylesheets="@../designs/MBlueButton.css" text="เปลี่ยนรหัสผ่าน">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Button>
+      <Label fx:id="changePageErrorLabel" layoutX="368.0" layoutY="338.0" prefHeight="26.0" prefWidth="332.0">
+         <font>
+            <Font size="20.0" />
+         </font></Label>
+    </children>
+</AnchorPane>

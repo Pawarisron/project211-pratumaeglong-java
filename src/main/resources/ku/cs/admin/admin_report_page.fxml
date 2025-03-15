@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.BoxBlur?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Ellipse?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1020.0" style="-fx-background-color: #012030;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ku.cs.controllers.admin.AdminReportPageController">
+   <children>
+      <Ellipse fill="#50b19c" layoutX="85.0" layoutY="615.0" opacity="0.54" radiusX="231.0" radiusY="191.0" stroke="BLACK" strokeType="INSIDE">
+         <effect>
+            <BoxBlur height="156.0" width="255.0" />
+         </effect>
+      </Ellipse>
+      <Ellipse fill="#fc72a2" layoutX="893.0" layoutY="120.0" opacity="0.54" radiusX="231.0" radiusY="191.0" stroke="BLACK" strokeType="INSIDE">
+         <effect>
+            <BoxBlur height="156.0" width="255.0" />
+         </effect>
+      </Ellipse>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="630.0" layoutX="158.0" layoutY="39.0" smooth="false" stroke="WHITE" strokeLineCap="ROUND" strokeMiterLimit="20.0" strokeType="OUTSIDE" strokeWidth="20.0" width="825.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#13678a" height="600.0" layoutX="34.0" layoutY="54.0" smooth="false" stroke="#13678a" strokeLineCap="ROUND" strokeMiterLimit="20.0" strokeType="OUTSIDE" strokeWidth="20.0" width="750.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="223.0" layoutX="556.0" layoutY="303.0" smooth="false" stroke="WHITE" strokeLineCap="ROUND" strokeMiterLimit="20.0" strokeType="OUTSIDE" strokeWidth="20.0" width="370.0" />
+      <Label layoutX="45.0" layoutY="50.0" text="รายงานความไม่เหมาะสมของผู้ใช้งานระบบ" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="40.0" />
+         </font>
+      </Label>
+      <Button layoutX="839.0" layoutY="627.0" mnemonicParsing="false" onAction="#handleReportPageBackButton" stylesheets="@../designs/MBlueButton.css" text="ย้อนกลับ">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Button>
+      <Button layoutX="694.0" layoutY="494.0" mnemonicParsing="false" onAction="#handleBanButton" prefHeight="56.0" prefWidth="147.0" stylesheets="@../designs/YellowButtonBlueText.css" text="ระงับสิทธ์">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font></Button>
+      <TableView fx:id="reportedTableView" layoutX="45.0" layoutY="126.0" prefHeight="490.0" prefWidth="482.0" stylesheets="@../designs/TableView.css">
+         <columns>
+            <TableColumn fx:id="usernameColumn" prefWidth="160.0" text="ชื่อผู้ใช้ที่ถูกรายงาน" />
+            <TableColumn fx:id="headerColumn" prefWidth="160.0" text="หัวเรื่องที่ถูกรายงาน" />
+            <TableColumn fx:id="typeColumn" prefWidth="160.0" text="ประเภทรายงาน" />
+         </columns>
+      </TableView>
+      <Label layoutX="547.0" layoutY="128.0" text="ชื่อผู้ใช้" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="usernameLabel" layoutX="571.0" layoutY="158.0" prefHeight="30.0" prefWidth="182.0" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="547.0" layoutY="184.0" prefHeight="30.0" prefWidth="253.0" text="ประเภทของความไม่เหมาะสม" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="typeLabel" layoutX="571.0" layoutY="214.0" prefHeight="26.0" prefWidth="182.0" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#13678a" height="183.0" layoutX="562.0" layoutY="284.0" smooth="false" stroke="#13678a" strokeLineCap="ROUND" strokeMiterLimit="20.0" strokeType="OUTSIDE" strokeWidth="20.0" width="400.0" />
+      <Label layoutX="547.0" layoutY="240.0" prefHeight="21.0" prefWidth="174.0" text="หัวข้อ" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="headerLabel" layoutX="565.0" layoutY="270.0" prefHeight="26.0" prefWidth="182.0" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="notificationLabel" layoutX="853.0" layoutY="484.0" prefHeight="75.0" prefWidth="129.0" textFill="#2b6777" wrapText="true">
+         <font>
+            <Font size="16.0" />
+         </font></Label>
+      <Button layoutX="539.0" layoutY="559.0" mnemonicParsing="false" onAction="#handleRemoveButton" prefHeight="56.0" prefWidth="147.0" stylesheets="@../designs/YellowButtonBlueText.css" text="นำออก">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font></Button>
+      <Button layoutX="539.0" layoutY="494.0" mnemonicParsing="false" onAction="#handleRemoveReportButton" prefHeight="56.0" prefWidth="147.0" stylesheets="@../designs/YellowButtonBlueText.css" text="ลบเนื้อหา">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Button>
+      <Label layoutX="547.0" layoutY="296.0" text="รายละเอียดของรายงาน" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="detailLabel" alignment="TOP_LEFT" layoutX="547.0" layoutY="326.0" prefHeight="150.0" prefWidth="415.0" textFill="WHITE" wrapText="true">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

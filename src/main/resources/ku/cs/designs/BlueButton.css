@@ -1,0 +1,27 @@
+.button
+{
+    -fx-text-fill: #c8d8e4;
+    -fx-background-color: #2b6777;
+    -fx-border-color: #2b6777;
+    -fx-border-width: 2;
+    -fx-background-radius: 10 10 10 10;
+    -fx-border-radius: 10 10 10 10;
+}
+.button:hover
+{
+    -fx-text-fill: #2b6777;
+    -fx-background-color: WHITE;
+    -fx-border-color: #2b6777;
+    -fx-border-width: 2;
+    -fx-background-radius: 10 10 10 10;
+    -fx-border-radius: 10 10 10 10;
+}
+.button:pressed
+{
+    -fx-text-fill: #c8d8e4;
+    -fx-background-color: #2b6777;
+    -fx-border-color: #2b6777;
+    -fx-border-width: 2;
+    -fx-background-radius: 10 10 10 10;
+    -fx-border-radius: 10 10 10 10;
+}

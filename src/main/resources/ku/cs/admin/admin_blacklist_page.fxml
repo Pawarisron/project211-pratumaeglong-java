@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.BoxBlur?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Ellipse?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1020.0" style="-fx-background-color: #012030;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ku.cs.controllers.admin.AdminBlacklistPageController">
+   <children>
+      <Ellipse fill="#fc72a2" layoutX="868.0" layoutY="156.0" opacity="0.54" radiusX="215.0" radiusY="159.0" stroke="BLACK" strokeType="INSIDE">
+         <effect>
+            <BoxBlur height="156.0" width="255.0" />
+         </effect>
+      </Ellipse>
+      <Ellipse fill="#9aeba3" layoutX="82.0" layoutY="646.0" radiusX="67.0" radiusY="60.0" stroke="BLACK" strokeType="INSIDE">
+         <effect>
+            <BoxBlur height="156.0" width="255.0" />
+         </effect>
+      </Ellipse>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="480.0" layoutX="520.0" layoutY="127.0" smooth="false" stroke="WHITE" strokeLineCap="ROUND" strokeMiterLimit="20.0" strokeType="OUTSIDE" strokeWidth="20.0" width="450.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#13678a" height="600.0" layoutX="35.0" layoutY="52.0" smooth="false" stroke="#13678a" strokeLineCap="ROUND" strokeMiterLimit="20.0" strokeType="OUTSIDE" strokeWidth="20.0" width="500.0" />
+      <Label layoutX="45.0" layoutY="50.0" text="รายชื่อผู้ถูกระงับสิทธิ์" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="48.0" />
+         </font>
+      </Label>
+      <Button layoutX="573.0" layoutY="557.0" mnemonicParsing="false" onAction="#handleUnbanButton" prefHeight="56.0" prefWidth="127.0" stylesheets="@../designs/YellowButtonBlueText.css" text="คืนสิทธ์">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font></Button>
+      <TableView fx:id="blacklistTableView" layoutX="45.0" layoutY="126.0" prefHeight="482.0" prefWidth="480.0" stylesheets="@../designs/TableView.css">
+        <columns>
+          <TableColumn fx:id="usernameColumn" prefWidth="160.0" text="ชื่อผู้ใช้" />
+          <TableColumn fx:id="tryToLoginCountColumn" prefWidth="160.0" text="จำนวนครั้ง&#10;ที่พยายามเข้าใช้งาน" />
+            <TableColumn fx:id="requestStatus" prefWidth="160.0" text="สถานะ&#10;ข้อความร้องขอ" />
+        </columns>
+      </TableView>
+      <ImageView fx:id="userImage" fitHeight="150.0" fitWidth="150.0" layoutX="591.0" layoutY="137.0" pickOnBounds="true" preserveRatio="true" />
+      <Label layoutX="577.0" layoutY="352.0" text="รายละเอียดการขอคืนสิทธ์" textFill="#13678a">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="headerLabel" layoutX="577.0" layoutY="382.0" prefHeight="27.0" prefWidth="111.0" textFill="#13678a">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="766.0" layoutY="182.0" text="ชื่อบัญชีผู้ใช้" textFill="#13678a">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="accountNameLabel" layoutX="776.0" layoutY="212.0" prefHeight="26.0" prefWidth="158.0" textFill="#13678a">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="766.0" layoutY="238.0" text="ชื่อผู้ใช้" textFill="#13678a">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="usernameLabel" layoutX="776.0" layoutY="263.0" prefHeight="26.0" prefWidth="158.0" textFill="#13678a">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="766.0" layoutY="294.0" text="หน่วยงานที่รับผิดชอบ" textFill="#13678a">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="departmentInChargeLabel" layoutX="776.0" layoutY="324.0" prefHeight="26.0" prefWidth="158.0" textFill="#13678a">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="577.0" layoutY="294.0" text="เวลาเข้าใช้งานล่าสุด" textFill="#13678a">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="loginTimeLabel" layoutX="593.0" layoutY="324.0" prefHeight="26.0" prefWidth="158.0" textFill="#13678a">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="766.0" layoutY="126.0" text="สถานภาพ" textFill="#13678a">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="selectedLevelLable" layoutX="776.0" layoutY="156.0" prefHeight="26.0" prefWidth="158.0" textFill="#13678a">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="detailLabel" alignment="TOP_LEFT" layoutX="577.0" layoutY="409.0" prefHeight="140.0" prefWidth="380.0" textFill="#13678a" wrapText="true">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="notificationLabel" layoutX="710.0" layoutY="572.0" prefHeight="26.0" prefWidth="127.0" text="notificationLabel" textFill="#80b0ff" visible="false">
+         <font>
+            <Font size="16.0" />
+         </font></Label>
+      <Button layoutX="839.0" layoutY="627.0" mnemonicParsing="false" onAction="#blacklistPageBackButton" stylesheets="@../designs/MBlueButton.css" text="ย้อนกลับ">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

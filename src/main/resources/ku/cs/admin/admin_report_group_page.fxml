@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.effect.BoxBlur?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Ellipse?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="744.0" prefWidth="1020.0" style="-fx-background-color: #012030;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ku.cs.controllers.admin.AdminReportGroupController">
+   <children>
+      <Ellipse fill="#73fae0" layoutX="95.0" layoutY="651.0" opacity="0.54" radiusX="136.0" radiusY="93.0" stroke="BLACK" strokeType="INSIDE">
+         <effect>
+            <BoxBlur height="156.0" width="255.0" />
+         </effect>
+      </Ellipse>
+      <Ellipse fill="#fc72a2" layoutX="928.0" layoutY="145.0" opacity="0.54" radiusX="136.0" radiusY="191.0" stroke="BLACK" strokeType="INSIDE">
+         <effect>
+            <BoxBlur height="156.0" width="255.0" />
+         </effect>
+      </Ellipse>
+
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="655.0" layoutX="172.0" layoutY="42.0" smooth="false" stroke="WHITE" strokeLineCap="ROUND" strokeMiterLimit="20.0" strokeType="OUTSIDE" strokeWidth="20.0" visible="false" width="810.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#13678a" height="640.0" layoutX="40.0" layoutY="50.0" smooth="false" stroke="#13678a" strokeLineCap="ROUND" strokeMiterLimit="20.0" strokeType="OUTSIDE" strokeWidth="20.0" width="612.0" />
+      <Group fx:id="thirdGroup" layoutX="524.0" layoutY="518.0" visible="false">
+         <children>
+            <Button fx:id="confirmDeleteButton" layoutX="10.0" layoutY="36.0" mnemonicParsing="false" onAction="#handleDeleteConfirmButoon" stylesheets="@../designs/YellowButtonBlueText.css" text="ยืนยัน">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="cancelDeleteButton" layoutX="88.0" layoutY="36.0" mnemonicParsing="false" onAction="#handleDeleteCancelButton" stylesheets="@../designs/YellowButtonBlueText.css" text="ยกเลิก">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Button>
+            <Label fx:id="deleteMessageLabel" layoutX="10.0" layoutY="4.0" text="ท่านจะลบหมวดหมู่เรื่องร้องเรียนนี้หรือไม่" textFill="#9aeba3">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+               <effect>
+                  <Glow level="0.43" />
+               </effect>
+            </Label>
+         </children>
+      </Group>
+      <Group fx:id="secondGroup" layoutX="700.0" layoutY="70.0" visible="false">
+         <children>
+            <Label fx:id="nameMessageLabel" layoutX="112.0" layoutY="101.0" prefHeight="19.0" prefWidth="241.0" text="โปรดใส่ข้อมูลในส่วนนี้">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="headTextLabel" prefHeight="30.0" prefWidth="302.0" text="headTextLabel" textFill="#dafdba">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+               <effect>
+                  <Glow level="0.35" />
+               </effect>
+            </Label>
+            <ChoiceBox fx:id="typeChoiceBox" layoutY="57.0" prefHeight="35.0" prefWidth="232.0" style="-fx-font-size: 16;">
+               <tooltip>
+                  <Tooltip autoHide="true" text="หมวดหมู่ที่อยากให้ผู้ใช้กรอก" />
+               </tooltip>
+            </ChoiceBox>
+            <Label layoutY="29.0" text="ประเภทหมวดหมู่" textFill="#45c4b0">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+               <effect>
+                  <Glow level="0.36" />
+               </effect>
+            </Label>
+            <Label layoutY="95.0" text="ชื่อหมวดหมู่" textFill="#45c4b0">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+               <effect>
+                  <Glow level="0.36" />
+               </effect>
+            </Label>
+            <TextField fx:id="nameTextField" layoutY="123.0" prefHeight="35.0" prefWidth="232.0" promptText="หมวดหมู่">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <tooltip>
+                  <Tooltip autoHide="true" text="ชื่อที่อยากให้ผู้ใช้ทราบ" />
+               </tooltip>
+            </TextField>
+            <Label layoutY="165.0" text="รายละเอียดเพิ่มเติม" textFill="#45c4b0">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+               <effect>
+                  <Glow level="0.36" />
+               </effect>
+            </Label>
+            <Button fx:id="confirmButton" layoutX="52.0" layoutY="496.0" mnemonicParsing="false" onAction="#handleConfirmButoon" stylesheets="@../designs/YellowButtonBlueText.css" text="ยืนยัน">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Button>
+            <Button fx:id="cancelButton" layoutX="142.0" layoutY="496.0" mnemonicParsing="false" onAction="#handleCancelButton" stylesheets="@../designs/YellowButtonBlueText.css" text="ยกเลิก">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Button>
+            <TextArea fx:id="detailTextArea" layoutY="193.0" prefHeight="287.0" prefWidth="232.0" promptText="รายละเอียด" wrapText="true">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <tooltip>
+                  <Tooltip autoHide="true" text="สิ่งที่อยากให้ผู้ใช้ใส่ข้อมูล จะใส่ก็ได้ไม่ใส่ก็ได้" />
+               </tooltip>
+            </TextArea>
+            <Label fx:id="typeMessageLabel" layoutX="151.0" layoutY="35.0" prefHeight="19.0" prefWidth="193.0" text="โปรดใส่ข้อมูลในส่วนนี้">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </Group>
+      <Button layoutX="839.0" layoutY="627.0" mnemonicParsing="false" onAction="#handleBackButton" stylesheets="@../designs/MBlueButton.css" text="ย้อนกลับ">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Button>
+      <Label layoutX="45.0" layoutY="50.0" text="หมวดหมู่เรื่องร้องเรียนทั้งหมด" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="48.0" />
+         </font>
+         <effect>
+            <Glow level="0.15" />
+         </effect>
+      </Label>
+      <Group fx:id="firstGroup" layoutX="529.0" layoutY="129.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="243.0" layoutX="16.0" layoutY="134.0" smooth="false" stroke="WHITE" strokeLineCap="ROUND" strokeMiterLimit="20.0" strokeType="OUTSIDE" strokeWidth="20.0" visible="false" width="370.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="183.0" layoutX="25.0" layoutY="126.0" smooth="false" stroke="WHITE" strokeLineCap="ROUND" strokeMiterLimit="20.0" strokeType="OUTSIDE" strokeWidth="20.0" width="410.0" />
+            <Button fx:id="addReportGroupButton" focusTraversable="false" layoutX="5.0" layoutY="340.0" mnemonicParsing="false" onAction="#handleAddReportGroupButton" prefHeight="56.0" prefWidth="205.0" stylesheets="@../designs/YellowButtonBlueText.css" text="เพิ่มหมวดหมู่">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Button>
+            <Button fx:id="deleteReportGroupButton" layoutX="5.0" layoutY="460.0" mnemonicParsing="false" onAction="#handleDeleteReportGroupButton" prefHeight="56.0" prefWidth="205.0" stylesheets="@../designs/YellowButtonBlueText.css" text="ลบหมวดหมู่">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Button>
+            <Label layoutX="10.0" layoutY="49.0" text="ID:" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+               <effect>
+                  <Glow level="0.26" />
+               </effect>
+            </Label>
+            <Label fx:id="detailTextLabel" alignment="TOP_LEFT" focusTraversable="true" layoutX="15.0" layoutY="118.0" prefHeight="199.0" prefWidth="420.0" textFill="#13678a" wrapText="true">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="10.0" layoutY="76.0" text="รายละเอียด" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+               <effect>
+                  <Glow level="0.26" />
+               </effect>
+            </Label>
+            <Button fx:id="editReportGroupButton" layoutX="5.0" layoutY="400.0" mnemonicParsing="false" onAction="#handleEditReportGroupButton" prefHeight="56.0" prefWidth="205.0" stylesheets="@../designs/YellowButtonBlueText.css" text="แก้ไขหมวดหมู่">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Button>
+            <Label fx:id="reportNameTextLabel" layoutX="122.0" layoutY="3.0" text="reportNameTextLabel" textFill="#2b6777" visible="false">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="idTextLabel" layoutX="45.0" layoutY="52.0" prefHeight="25.0" prefWidth="80.0" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="mainMessageLabel" layoutX="234.0" layoutY="413.0" prefHeight="60.0" prefWidth="220.0" textFill="#2b6777">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="10.0" layoutY="23.0" text="ประเภท:" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+               <effect>
+                  <Glow level="0.26" />
+               </effect>
+            </Label>
+            <Label fx:id="typeTextLabel" layoutX="85.0" layoutY="28.0" prefHeight="25.0" prefWidth="110.0" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </Group>
+      <TableView fx:id="reportGroupTableView" focusTraversable="false" layoutX="45.0" layoutY="126.0" onMouseClicked="#handleTableViewOnMouseClicked" prefHeight="522.0" prefWidth="441.0" stylesheets="@../designs/TableView.css">
+        <columns>
+            <TableColumn fx:id="typeTableColumn" text="ประเภท" />
+          <TableColumn fx:id="idTableColumn" text="ID" />
+          <TableColumn fx:id="nameTableColumn" prefWidth="280.0" text="หมวดหมู่เรื่องร้องเรียน" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

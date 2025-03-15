@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.BoxBlur?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Ellipse?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1020.0" style="-fx-background-color: #012030;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ku.cs.controllers.base.RegisterController">
+   <children>
+      <Ellipse fill="#fc72a2" layoutX="711.0" layoutY="193.0" opacity="0.54" radiusX="231.0" radiusY="191.0" stroke="BLACK" strokeType="INSIDE">
+         <effect>
+            <BoxBlur height="156.0" width="255.0" />
+         </effect>
+      </Ellipse>
+      <Ellipse fill="#9aeba3" layoutX="279.0" layoutY="627.0" radiusX="67.0" radiusY="60.0" stroke="BLACK" strokeType="INSIDE">
+         <effect>
+            <BoxBlur height="156.0" width="255.0" />
+         </effect>
+      </Ellipse>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="581.0" layoutX="270.0" layoutY="70.0" smooth="false" stroke="WHITE" strokeLineCap="ROUND" strokeMiterLimit="20.0" strokeType="OUTSIDE" strokeWidth="20.0" width="560.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#13678a" height="335.0" layoutX="52.0" layoutY="194.0" smooth="false" stroke="#13678a" strokeLineCap="ROUND" strokeMiterLimit="20.0" strokeType="OUTSIDE" strokeWidth="20.0" width="211.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="190.0" layoutX="64.0" layoutY="245.0" smooth="false" stroke="WHITE" strokeLineCap="ROUND" strokeMiterLimit="20.0" strokeType="OUTSIDE" strokeWidth="20.0" width="184.0" />
+       <Button layoutX="839.0" layoutY="627.0" mnemonicParsing="false" onAction="#handleBackButton" stylesheets="@../designs/MBlueButton.css" text="ย้อนกลับ">
+           <font>
+               <Font name="System Bold" size="30.0" />
+           </font>
+       </Button>
+      <Label layoutX="295.0" layoutY="65.0" text="ลงทะเบียนสำหรับนิสิต" textFill="#2b6777">
+         <font>
+            <Font name="System Bold" size="48.0" />
+         </font>
+      </Label>
+      <TextField fx:id="usernameTextField" layoutX="309.0" layoutY="227.0" prefHeight="40.0" prefWidth="269.0" promptText="username">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <Label layoutX="309.0" layoutY="200.0" text="ชื่อบัญชีผู้ใช้" textFill="#2b6777">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="passwordTextField" layoutX="309.0" layoutY="309.0" prefHeight="40.0" prefWidth="269.0" promptText="password">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <Label layoutX="309.0" layoutY="279.0" text="รหัสผ่าน" textFill="#2b6777">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="confirmPasswordTextField" layoutX="309.0" layoutY="393.0" prefHeight="40.0" prefWidth="269.0" promptText="confirm password">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <Label layoutX="309.0" layoutY="362.0" text="ยืนยันรหัสผ่าน" textFill="#2b6777">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="accountnameTextField" layoutX="309.0" layoutY="480.0" prefHeight="40.0" prefWidth="269.0" promptText="account name">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <Label layoutX="309.0" layoutY="450.0" text="ชื่อบัญชีผู้ใช้" textFill="#2b6777">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="125.0" layoutY="185.0" text="รูปภาพ" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Button layoutX="101.0" layoutY="501.0" mnemonicParsing="false" onAction="#handleUploadFileButton" stylesheets="@../designs/YellowButtonBlueText.css" text="อัพโหลดไฟล์">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font></Button>
+      <Button layoutX="313.0" layoutY="585.0" mnemonicParsing="false" onAction="#handleRegisterButton" stylesheets="@../designs/YellowButtonBlueText.css" text="ลงทะเบียน">
+         <font>
+            <Font name="System Bold Italic" size="24.0" />
+         </font>
+      </Button>
+      <Label fx:id="confirmPasswordLabel" layoutX="590.0" layoutY="401.0" prefHeight="20.0" prefWidth="218.0" textFill="#ff3719">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="registrationMessageLabel" layoutX="461.0" layoutY="600.0" prefHeight="20.0" prefWidth="129.0" textFill="#0061ff">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="usernameErrMessageLabel" alignment="TOP_LEFT" layoutX="586.0" layoutY="225.0" prefHeight="64.0" prefWidth="226.0" textFill="#ff3719" textOverrun="CLIP" wrapText="true">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="passwordErrMessageLabel" alignment="TOP_LEFT" layoutX="586.0" layoutY="314.0" prefHeight="70.0" prefWidth="226.0" textFill="#ff3719" textOverrun="CLIP" wrapText="true">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="profileErrMassageLabel" layoutX="49.0" layoutY="462.0" prefHeight="20.0" prefWidth="217.0" textFill="#ff8181">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="profileImageView" fitHeight="199.0" fitWidth="199.0" layoutX="57.0" layoutY="241.0" pickOnBounds="true" />
+   </children>
+
+</AnchorPane>
